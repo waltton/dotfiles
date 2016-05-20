@@ -1,0 +1,13 @@
+# Case insensitive autocompletion.
+set completion-ignore-case On
+
+# Do not show hidden files when autocompleting, unless the pattern begins with a dot.
+set match-hidden-files Off
+
+# Show all autocomplete results at once.
+set page-completions Off
+
+# Show extra file information when completing, like `ls -F` does.
+set visible-stats On
+
+# vi:syn=readline

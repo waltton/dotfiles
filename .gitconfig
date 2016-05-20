@@ -1,0 +1,43 @@
+[user]
+    name = Waltton Morais 
+    email = walttonm@gmail.com
+
+[core]
+    editor = vim
+    pager = less -r
+
+[push]
+    default = simple
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[pretty]
+    graph = %C(green)%h %C(auto)%d %C(reset)%s %C(blue)%an%C(reset)
+    log = %C(green)%h %C(reset)%ad %C(auto)%d %C(reset)%s %C(blue)%an%C(reset)
+
+[alias]
+    s = status --short --branch
+    a = !git add . && git status --short --branch
+    b = branch --verbose
+    d = diff
+    c = commit
+    ae = commit --amend
+    an = commit --amend --no-edit
+    co = checkout
+    rb = rebase
+    ch = cherry-pick
+    fm = "!f() { git log --pretty=log --date=short --grep=$1; }; f"
+
+    l = log --graph --pretty=graph --all -15
+    ld = log --graph --pretty=graph --all -15
+    lf = log --graph --pretty=graph --all
+
+    alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t -> \\2/'
+
+# Loads ~/.gitconfig_local.
+# Local definition overwrites the ones above.
+[include]
+    path=~/.gitconfig_local
