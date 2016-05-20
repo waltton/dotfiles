@@ -30,6 +30,7 @@
     rb = rebase
     ch = cherry-pick
     fm = "!f() { git log --pretty=log --date=short --grep=$1; }; f"
+    m = merge --no-ff
 
     l = log --graph --pretty=graph --all -15
     ld = log --graph --pretty=graph --all -15
