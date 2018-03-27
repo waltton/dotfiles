@@ -5,6 +5,7 @@
 [core]
     editor = vim
     pager = less -r
+	excludesfile = /home/waltton/.gitignore_global
 
 [push]
     default = simple
@@ -15,12 +16,13 @@
     branch = auto
 
 [pretty]
-    graph = %C(green)%h %C(auto)%d %C(reset)%s %C(blue)%an%C(reset)
+    # graph = %C(green)%h %C(auto)%d %C(reset)%s %C(blue)%an%C(reset)
+    graph = %C(green)%h %C(auto)%d %C(reset)%s %C(blue)%an%C(reset) %C(cyan)(%ar)%C(reset)
     log = %C(green)%h %C(reset)%ad %C(auto)%d %C(reset)%s %C(blue)%an%C(reset)
 
 [alias]
     s = status --short --branch
-    a = !git add . && git status --short --branch
+    a = !git add -A && git status --short --branch
     b = branch --verbose
     d = diff
     c = commit
@@ -28,13 +30,16 @@
     an = commit --amend --no-edit
     co = checkout
     rb = rebase
+    rbc = rebase --continue
     ch = cherry-pick
     fm = "!f() { git log --pretty=log --date=short --grep=$1; }; f"
     m = merge --no-ff
 
-    l = log --graph --pretty=graph --all -15
-    ld = log --graph --pretty=graph --all -15
-    lf = log --graph --pretty=graph --all
+    wip = "!f() { git add -A; git commit -m \"WIP\"; }; f"
+    cnow = "!f() { git add -A; git commit -m \"`date +%Y-%m-%dT%H:%M`\"; git pull --rebase; git push; }; f"
+    
+    l = log --graph --pretty=graph --all
+    lnp = !git --no-pager log --graph --pretty=graph --all
 
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t -> \\2/'
 
@@ -42,3 +47,5 @@
 # Local definition overwrites the ones above.
 [include]
     path=~/.gitconfig_local
+[diff]
+	tool = meld
