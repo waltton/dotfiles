@@ -1,0 +1,74 @@
+{
+    "diffEditor.renderSideBySide": false,
+
+    "editor.fontFamily": "monofur",
+    "editor.fontSize": 14,
+    "editor.rulers": [119],
+    "editor.renderIndentGuides": false,
+    "editor.renderWhitespace": "all",
+    "editor.wordWrap": "off",
+    "editor.wordBasedSuggestions": false,
+
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "off",
+    "files.exclude": {
+        "**/.git": true,
+        "**/*.pyc": true,
+        "**/__pycache__": true,
+        "**/.cache": true
+    },
+    "search.exclude": {
+        "**/.venv": true,
+        "**/.git": true,
+        "**/*.pyc": true,
+        "**/__pycache__": true,
+        "**/.cache": true,
+        "tags": true
+    },
+
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120"
+    ],
+
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    "terminal.integrated.fontSize": 15,
+
+    "workbench.editor.enablePreview": true,
+    "workbench.activityBar.visible": true,
+
+    "window.zoomLevel": 0,
+    "window.menuBarVisibility": "toggle",
+    "vsicons.projectDetection.disableDetect": true,
+    "workbench.iconTheme": "vscode-icons",
+
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+
+    "keyboard.dispatch": "keyCode",
+    "git.enableSmartCommit": true,
+    "indenticator.style": "dashed",
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[css]": {
+        "editor.tabSize": 2
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.formatOnPaste": false,
+    "editor.autoIndent": false,
+    "emmet.triggerExpansionOnTab": true,
+    "extensions.ignoreRecommendations": false,
+    "terminal.integrated.fontFamily": "monofur",
+    "telemetry.enableTelemetry": false,
+    "git.autofetch": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "explorer.confirmDragAndDrop": false,
+    "editor.trimAutoWhitespace": true,
+    "editor.detectIndentation": false
+}

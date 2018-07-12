@@ -1,0 +1,28 @@
+[{
+    "key": "ctrl+k ctrl+l",
+    "command": "editor.action.transformToLowercase",
+    "when": "editorTextFocus"
+}, {
+    "key": "ctrl+k ctrl+U",
+    "command": "editor.action.transformToUppercase",
+    "when": "editorTextFocus"
+}, {
+    "key": "shift+alt+q",
+    "command": "workbench.action.maximizeEditor",
+    "when": "editorTextFocus"
+}, {
+    "key": "shift+alt+a",
+    "command": "workbench.action.evenEditorWidths",
+    "when": "editorTextFocus"
+},{
+    "key": "shift+alt+numpad_add",
+    "command": "git.stageSelectedRanges",
+    "when": "editorHasSelection"
+},{
+    "key": "shift+alt+numpad_subtract",
+    "command": "git.unstageSelectedRanges",
+    "when": "editorHasSelection"
+},{
+    "key": "ctrl+k ctrl+e",
+    "command": "editor.emmet.action.wrapWithAbbreviation"
+}]
